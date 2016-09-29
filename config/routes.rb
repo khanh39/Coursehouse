@@ -1,4 +1,3 @@
 Rails.application.routes.draw do
-  get 'pictures' => 'pictures#index'
-
+  get 'courses' => 'courses#index'
 end
