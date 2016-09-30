@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160927183231) do
+ActiveRecord::Schema.define(version: 20160930001028) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "file"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20160927183231) do
     t.datetime "updated_at",     null: false
     t.string   "title"
     t.integer  "price_in_cents"
+    t.string   "image"
   end
 
   create_table "payments", force: :cascade do |t|
