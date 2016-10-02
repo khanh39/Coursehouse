@@ -12,15 +12,16 @@ course2 = Course.create(title: 'Course2', file: 'course2', price_in_cents:400, i
 
 course3 = Course.create(title: 'Course3', file: 'course3', price_in_cents:300, image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=COURSE3&w=350&h=350')
 
-course4 = Course.create(title: 'Course4', file: 'course4', price_in_cents:500, image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=COURSE3&w=350&h=350')
+course4 = Course.create(title: 'Course4', file: 'course4', price_in_cents:500, image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=COURSE4&w=350&h=350')
 
 course5 = Course.create(title: 'Course5', file: 'course5', price_in_cents:600, image: 'https://placeholdit.imgix.net/~text?txtsize=33&txt=COURSE5&w=350&h=350')
 
 
+user = User.create(email: 'hamza@bitmaker.co')
+
+user2 = User.create(email: 'khanh39@mcmaster.ca')
+
+user3 = User.create(email: 'justifi3d@live.com')
 
 
-
-
-user = User.create!(email: 'hamza@bitmaker.co')
-
-Payment.create!(course_id:course.id, user_id:user.id, payment_amount: course.price_in_cents)
+Payment.create(course_id:course.id, user_id:user.id, payment_amount: course.price_in_cents)
