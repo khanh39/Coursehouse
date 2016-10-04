@@ -1,5 +1,5 @@
 
 <h1>Courses</h1>
-<%= @course.title %> price: $<%= @course.price_in_cents %><%= image_tag(@course.image) %>
+<%= @course.title %> price: $<%= @course.formatted_price %><%= image_tag(@course.image) %>
 
 <%= link_to button_tag "Buy Now"%>
