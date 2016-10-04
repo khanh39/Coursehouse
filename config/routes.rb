@@ -9,8 +9,11 @@ Rails.application.routes.draw do
 
   get 'users/create'
 
-  get 'courses' => 'courses#index'
-  get 'courses/:id' => 'courses#show'
+  resources :courses
+  # get 'course' => 'courses#index'
+  # get 'course/:id' => 'courses#show'
+  # get 'course/:id/edit' => 'courses#edit'
+  # patch 'course/:id' => 'courses#update'
 
   resources :sessions, only: [:new, :create, :destroy]
 

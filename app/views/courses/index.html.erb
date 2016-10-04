@@ -1,6 +1,6 @@
   <h1>All of our courses</h1>
 
-  <% @the_courses.each do |course| %>
+  <% @courses.each do |course| %>
     <%=  course.title %><%= course.price_in_cents %>
     <%= link_to image_tag(course.image), "/courses/#{course.id}" %>
   <% end %>

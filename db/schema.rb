@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161002234710) do
+ActiveRecord::Schema.define(version: 20161003233523) do
 
   create_table "courses", force: :cascade do |t|
     t.string   "file"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20161002234710) do
     t.string   "title"
     t.integer  "price_in_cents"
     t.string   "image"
+    t.string   "description"
   end
 
   create_table "payments", force: :cascade do |t|
