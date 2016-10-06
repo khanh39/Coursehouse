@@ -1,14 +1,6 @@
 Rails.application.routes.draw do
-  get 'sessions/new'
 
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
-  get 'users/new'
-
-  get 'users/create'
-
+  resources :payments
   resources :courses
   # get 'course' => 'courses#index'
   # get 'course/:id' => 'courses#show'
@@ -16,6 +8,6 @@ Rails.application.routes.draw do
   # patch 'course/:id' => 'courses#update'
 
   resources :sessions, only: [:new, :create, :destroy]
-
   resources :users, only: [:new, :create]
+  root "home#index"
 end
