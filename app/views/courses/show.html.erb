@@ -5,14 +5,8 @@
 
 <%= image_tag(@course.image) %>
 
-#form, course_id %>
-
-<%= form_for(@course) do |f| %>
-  <% if @course.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@course.errors.count, "error") %> prohibited this course from being saved:</h2>
-  <% end %>
-
-
+<% if Payment.where(course_id: @course.id, user_id: current_user.id).empty? %>
+<%= button_to 'Buy Now' , {:controller => "payments", :action => "create", :course_id => @course.id, :user_id=> session[:user_id]} , :method=>:post  %>
+<% else %>
+<h2>Course already owned</h2>
 <% end %>
-#create a form,
