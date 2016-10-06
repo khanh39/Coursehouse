@@ -12,8 +12,10 @@ class PaymentsController < ApplicationController
   end
 
   private
+
   def payment_params
-    #course id
+    params.permit(:course_id)
+
   end
 
 end
