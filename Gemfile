@@ -35,6 +35,9 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+gem 'carrierwave', '>= 1.0.0.beta', '< 2.0'
+
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'

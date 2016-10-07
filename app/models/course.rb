@@ -1,4 +1,5 @@
 class Course < ApplicationRecord
+    mount_uploader :file, AvatarUploader
     has_many :users, :through => :payments
     has_many :payments
     validates :description, :title, presence: true

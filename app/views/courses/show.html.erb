@@ -1,6 +1,7 @@
 
 <h1>Courses</h1>
 <h3><%= @course.title %></h3>
+<%= link_to 'View Course Material', @course.file.url%>
 <h4>Price: $<%= @course.formatted_price %></h4>
 
 <%= image_tag(@course.image) %>

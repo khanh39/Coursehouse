@@ -2,5 +2,9 @@
 
   <% @courses.each do |course| %>
     <%=  course.title %> price: $<%=  course.formatted_price %>
-    <%= link_to image_tag(course.image), "/courses/#{course.id}" %>
+    <% if course.image %>
+      <%= link_to image_tag(course.image), "/courses/#{course.id}" %>
+    <% else %>
+      <%= link_to image_tag("https://placeholdit.imgix.net/~text?txtsize=33&txt=PLACEHOLDER&w=350&h=350"), "/courses/#{course.id}" %>
+    <% end %>
   <% end %>

@@ -17,12 +17,20 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image, :value => 'https://placeholdit.imgix.net/~text?txtsize=33&txt=PLACEHOLDER&w=350&h=350' %>
+  </div>
+  <div class="field">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :price_in_cents %><br />
     <%= f.number_field :price_in_cents %>
+  </div>
+  <div class="field">
+    <%= f.label :file_upload %><br />
+    <%= f.file_field :file %>
   </div>
   <div class="actions">
     <%= f.submit %>
